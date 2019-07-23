@@ -21,15 +21,13 @@ camera.start_preview()
 now = datetime.datetime.now()
 str_now = now.strftime("%m/%d/%Y, %H:%M:%S")
 
-os.mkdir(str_now)
-
-FOLDERCREATED = str_now
+FOLDERCREATED = os.mkdir('{}/{}'.format(RASPI_PATH, str_now))
 
 #inside the () is the number of photos taken
 for i in range(SESSION_LENGTH/INTERVAL):
 	time.sleep(INTERVAL)
 	#this captures an image and saves into the FOLDERCREATED, the images are named image(i).jpg
-	camera.capture('{}/{}/image{}.jpg'.format(RASPI_PATH, FOLDERCREATED, i))
+	camera.capture('{}/{}/image{}.jpg'.format(, FOLDERCREATED, i))
 
 camera.stop_preview()
 
