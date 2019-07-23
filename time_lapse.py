@@ -21,7 +21,9 @@ camera.start_preview()
 now = datetime.datetime.now()
 str_now = now.strftime("%m/%d/%Y, %H:%M:%S")
 
-FOLDERCREATED = os.mkdir(str_now)
+os.mkdir(str_now)
+
+FOLDERCREATED = str_now
 
 #inside the () is the number of photos taken
 for i in range(SESSION_LENGTH/INTERVAL):
