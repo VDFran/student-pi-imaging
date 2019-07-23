@@ -18,7 +18,10 @@ camera.start_preview()
 # Have the camera take pictures at the specified interval until the session is over
 
 #this creates a folder everytime we start the camera so we can have a collection per run- the folder is named after the start date and time
-FOLDERCREATED = os.mkdir(datetime.datetime.now())
+now = datetime.datetime.now()
+str_now = now.strftime("%m/%d/%Y, %H:%M:%S")
+
+FOLDERCREATED = os.mkdir(str_now)
 
 #inside the () is the number of photos taken
 for i in range(SESSION_LENGTH/INTERVAL):
