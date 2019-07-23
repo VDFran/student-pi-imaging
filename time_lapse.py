@@ -27,7 +27,7 @@ FOLDERCREATED = os.mkdir('{}/{}'.format(RASPI_PATH, str_now))
 for i in range(SESSION_LENGTH/INTERVAL):
 	time.sleep(INTERVAL)
 	#this captures an image and saves into the FOLDERCREATED, the images are named image(i).jpg
-	camera.capture('{}/{}/image{}.jpg'.format(, FOLDERCREATED, i))
+	camera.capture('{}/{}/image{}.jpg'.format(FOLDERCREATED, i))
 
 camera.stop_preview()
 
