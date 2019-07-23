@@ -19,6 +19,7 @@ camera.start_preview()
 
 #this creates a folder everytime we start the camera so we can have a collection per run- the folder is named after the start date and time
 FOLDERCREATED = datetime.datetime.now()
+FOLDERCREATED = os.mkdir(datetime.datetime.now())
 
 #inside the () is the number of photos taken
 for i in range(SESSION_LENGTH/INTERVAL):
