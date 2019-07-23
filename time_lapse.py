@@ -19,9 +19,11 @@ camera.start_preview()
 
 #this creates a folder everytime we start the camera so we can have a collection per run- the folder is named after the start date and time
 now = datetime.datetime.now()
-str_now = now.strftime("%m/%d/%Y, %H:%M:%S")
+str_now = now.strftime("%m-%d-%Y-%H:%M:%S")
 
-FOLDERCREATED = os.mkdir('{}/{}'.format(RASPI_PATH, str_now))
+os.mkdir('{}/{}'.format(RASPI_PATH, str_now))
+
+FOLDERCREATED = '{}/{}'.format(RASPI_PATH, str_now)
 
 #inside the () is the number of photos taken
 for i in range(SESSION_LENGTH/INTERVAL):
