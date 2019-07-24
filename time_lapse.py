@@ -1,7 +1,7 @@
 import os
 import datetime
 from datetime import tzinfo
-from datetime import timezone
+# from datetime import timezone
 import math
 from picamera import PiCamera
 from time import sleep
@@ -19,7 +19,7 @@ camera.start_preview()
 # Have the camera take pictures at the specified interval until the session is over
 
 #this creates a folder everytime we start the camera so we can have a collection per run- the folder is named after the start date and time
-datetime.timezone.tzname("EDT")
+# datetime.timezone.tzname("EDT")
 now = datetime.datetime.now()
 str_now = now.strftime("%m-%d-%Y-%H:%M:%S")
 
