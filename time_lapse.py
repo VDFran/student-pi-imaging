@@ -11,7 +11,7 @@ import time
 RASPI_PATH = "/home/pi"
 
 INTERVAL = 10# the time interval (in seconds) between pictures
-SESSION_LENGTH = 50# the duration of the script
+SESSION_LENGTH = 1100# the duration of the script
 
 camera = PiCamera()
 camera.start_preview()
