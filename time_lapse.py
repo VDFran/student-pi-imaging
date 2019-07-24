@@ -1,7 +1,7 @@
 import os
 import datetime
 from datetime import tzinfo
-from datetime import tzname
+from datetime import timezone
 import math
 from picamera import PiCamera
 from time import sleep
