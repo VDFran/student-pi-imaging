@@ -11,7 +11,7 @@ import time
 # Enter the path where the raspberry pi will store its file
 RASPI_PATH = "/home/pi"
 
-INTERVAL = 10 # the time interval (in seconds) between pictures
+INTERVAL = 5 # the time interval (in seconds) between pictures
 SESSION_LENGTH = 1100# the duration of the script
 
 camera = PiCamera()
